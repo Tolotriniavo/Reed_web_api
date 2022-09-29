@@ -92,28 +92,28 @@ WSGI_APPLICATION = 'Ridee.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 #database local
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',  
-#         'NAME': 'Ridee',  
-#         'USER': 'root',  
-#         'PASSWORD': 'root',  
-#         'HOST': 'localhost',  
-#         'PORT': '3306',
-#     }
-# }
-
-#database local server
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'lemurw_db',  
-        'USER': 'adck9c112djw',  
-        'PASSWORD': 'Hb7Y2Fa~Hnbp+',  
+        'NAME': 'Ridee',  
+        'USER': 'root',  
+        'PASSWORD': 'root',  
         'HOST': 'localhost',  
         'PORT': '3306',
     }
 }
+
+#database local server
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',  
+#         'NAME': 'ridee',  
+#         'USER': 'adck9c112djw',  
+#         'PASSWORD': 'Hb7Y2Fa~Hnbp+',  
+#         'HOST': 'localhost',  
+#         'PORT': '3306',
+#     }
+# }
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
