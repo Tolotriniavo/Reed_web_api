@@ -8,8 +8,8 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from datetime import datetime
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
-from .models import Category_Service, Service, Contact, Faq
-from .serializers import User_Serializer, Category_Service_Serializer, Service_Serializer, Contact_Serializer, Faq_Serializer
+from .models import Category_Service, Service, Contact, Faq, ImageforCKEditor
+from .serializers import User_Serializer, Category_Service_Serializer, Service_Serializer, Contact_Serializer, Faq_Serializer, ImageforCKEditor_Serializer
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 from rest_framework.decorators import action
@@ -79,4 +79,14 @@ class Faq_APIView(ModelViewSet):
 class User_APIView(ModelViewSet):
     serializer_class = User_Serializer
     queryset = User.objects.all()    
+    permission_classes = [IsAuthenticated]
+
+class User_APIView(ModelViewSet):
+    serializer_class = User_Serializer
+    queryset = User.objects.all()    
+    permission_classes = [IsAuthenticated]
+
+class ImageforCKEditor_APIView(ModelViewSet):
+    serializer_class = ImageforCKEditor_Serializer
+    queryset = ImageforCKEditor.objects.all()    
     permission_classes = [IsAuthenticated]

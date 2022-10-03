@@ -3,8 +3,14 @@ from django.contrib.auth.models import User
 from django.db import transaction
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Category_Service, Service, Contact, Faq
+from .models import Category_Service, Service, Contact, Faq, ImageforCKEditor
 
+
+class ImageforCKEditor_Serializer(serializers.ModelSerializer):
+    class Meta: 
+        model = ImageforCKEditor 
+        fields = '__all__'
+        read_only = ['id']
 
 class Category_Service_Serializer(serializers.ModelSerializer):
     class Meta: 

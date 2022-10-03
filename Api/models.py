@@ -5,6 +5,9 @@ from datetime import datetime
 def upload_to(instance, filename):
     return 'images/{filename}'.format(filename=filename)
 
+class ImageforCKEditor(models.Model):
+    image_url = models.ImageField(upload_to=upload_to, blank=True, null=True)
+
 class Category_Service(models.Model):
     name = models.CharField(max_length=150)
     name_eng = models.CharField(max_length=150)
