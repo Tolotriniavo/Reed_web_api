@@ -98,14 +98,13 @@ WSGI_APPLICATION = 'Ridee.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'Ridee',  
-        'USER': 'root',  
-        'PASSWORD': 'root',  
-        'HOST': 'localhost',  
+        'NAME': 'ridee',  
+        'USER': 'adck9c112djw',  
+        'PASSWORD': 'Hb7Y2Fa~Hnbp+',  
+        'HOST': '92.204.218.151',  
         'PORT': '3306',
     }
 }
-
 #database local server
 # DATABASES = {
 #     'default': {
